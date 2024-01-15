@@ -13,7 +13,7 @@ console.log(gameName.toUpperCase())
 //gives the string after slicing => last index is excluded
 console.log(gameName.slice(0,4))
 
-const myName = "   yash    "
+const myName = "   yash   "
 
 //trims all the leading and trailing whitespaces
 console.log(myName.trim())
