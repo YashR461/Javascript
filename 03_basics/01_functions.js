@@ -3,7 +3,7 @@ function addTwoNumbers(num1 , num2) {
         return num1 + num2
     }
 }
-//console.log(addTwoNumbers(1,4))
+console.log(addTwoNumbers(1,4))
 
 function userMessage(userName) {
     if (userName === undefined) {
@@ -12,8 +12,8 @@ function userMessage(userName) {
     }
     return `${userName} just logged in`
 }
-//console.log(userMessage("Yash"))
-//console.log(userMessage("ok")) // undefined just logged in
+console.log(userMessage("Yash"))
+console.log(userMessage("ok")) // undefined just logged in
 
 
 //rest operator
@@ -40,7 +40,6 @@ function handleObject(anyObject) {
 handleObject(user)
 
 //Arrays
-
 const myArray = [0,1,2,3,4,5]
 function returnSecondValue(arr) {
     return arr[0]
