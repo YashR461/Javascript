@@ -14,21 +14,21 @@ const jsUser = {
 }
 
 //access values in objects
-// console.log(jsUser.name)
-// console.log(jsUser["name"])
-// console.log(jsUser["full name"])
-// console.log(jsUser[mySym])
-// console.log(jsUser)
+console.log(jsUser.name)
+console.log(jsUser["name"])
+console.log(jsUser["full name"])
+console.log(jsUser[mySym])
+console.log(jsUser)
 
 //change values in objects
 jsUser["full name"] = "Yash Chopra"
-// console.log(jsUser["full name"])
+console.log(jsUser["full name"])
 
 //freeze objects so that no changes can be made
 jsUser.email = "yash@microsoft.com"
-//Object.freeze(jsUser)
+Object.freeze(jsUser)
 jsUser.email = "yash@chatgpt.com "
-// console.log(jsUser)
+console.log(jsUser)
 
 //function
 jsUser.greeting = function(){
