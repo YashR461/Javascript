@@ -20,7 +20,6 @@ const user = {
 //user.leavingMessage()
 // console.log(this)
 
-
 const printName = function() {
     let userName = "Yash"
     //console.log(this)        // Gives the global scope
@@ -45,7 +44,6 @@ console.log(addTwo(2,3))
 //Implicit return arrow function
 const addThree = (num1, num2) => (num1+num2)
 console.log(addThree(4,4))
-
 
 //return object
 const returnObject = () => ({userName: "Yash Rastogi"})
