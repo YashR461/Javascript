@@ -12,41 +12,56 @@
 </body>
 <script>
 
-    // adding values
+    // ----------------------------adding values------------------------------------
+
+    // not efficient way
     function addLangauge(langName) {
-        const li = document.createElement('li');
-        li.innerHTML = `${langName}`;
-        document.querySelector(".language").appendChild(li);
+        const newlyCreatedLi = document.createElement("li");
+        newlyCreatedLi.innerHTML = `${langName}`;
+        document.querySelector(".language").appendChild(newlyCreatedLi);
     }
-    addLangauge("Python")
+    addLangauge("Typescript");
+    addLangauge("Java");
 
-    function addOptiLanguage(langName) {
-       const li = document.createElement("li");
-       li.appendChild(document.createTextNode(langName));
-       document.querySelector(".language").appendChild(li);
+    //efficient way
+    function addLangaugeEfficiently(langName) {
+        const newlyCreatedLi = document.createElement("li")
+        const newlyCreatedTextNode = document.createTextNode(langName);
+        newlyCreatedLi.appendChild(newlyCreatedTextNode);
+        document.querySelector(".language").appendChild(newlyCreatedLi);
     }
-    addOptiLanguage("Golang")
+    addLangaugeEfficiently("C++");
+    addLangaugeEfficiently("Golang");
 
-    //editing values
+    // -------------------------adding values ends here-----------------------------
 
-    // using innerHtml
-    const secondLangauge = document.querySelector("li:nth-child(2)");
-    secondLangauge.innerHTML = "Mojo"
 
-    //using textContent
-    const newli = document.createElement("li");
-    newli.textContent = "Mojo"
-    secondLangauge.replaceWith(newli);
+    //---------------------------editing existing values----------------------------
 
-    //using replace with
-    const firstLanguage = document.querySelector("li:nth-child(1)");
-    const newli2 = document.createElement("li");
-    newli2.textContent = "Typescript";
-    firstLanguage.replaceWith(newli2);
+    //using innerhtml
+    const lastLang = document.querySelector("li:last-child");
+    console.log(lastLang);
+    lastLang.innerHTML = "Last language";
 
-    //removing values
+    //using replaceWith
+    const selectSecondLanguage = document.querySelector("li:nth-child(2)");
+    const newlyCreatedLi = document.createElement("li");
+    newlyCreatedLi.textContent = "Yash Rastogi";
+    selectSecondLanguage.replaceWith(newlyCreatedLi);
+    //using replaceWith
+    const firstLang = document.querySelector("li:first-child");
+    const newlyCreatedLi2 = document.createElement("li");
+    newlyCreatedLi2.textContent = "Ruby on rails";
+    firstLang.replaceWith(newlyCreatedLi2);
+
+    //-------------------editing existing values ends here--------------------------
+
+    //------------------------------removing values---------------------------------
 
     const lastlanguage = document.querySelector("li:last-child");
-    lastlanguage.remove();
+    lastlanguage.remove(); 
+    
+    //-------------------------removing values ends here----------------------------
+
 </script>
 </html>
