@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="color: #fff; background-color: #212121;">
+    <h1>Javascript code and Chill</h1>
+    <button id="start"> Start </button>
+    <button id="stop"> Stop </button>
+</body>
+<script>
+    // setInterval(function () {
+    //     console.log("Yash");
+    // }, 1000);
+
+    // const sayDate = function(str) {
+    //     console.log(str, Date.now());
+    // };
+
+    // const refr = setInterval(sayDate, 2000, "hi");
+    // clearInterval(refr);
+
+    //start and stop button assignment
+    // start => when we press start button it starts printing the string which i will give it
+    // stop => when we press stop button it stops the printing
+    let intervalId;
+    const printString = (str) => {
+        console.log(str, Date.now());
+    };
+    document.querySelector("#start").addEventListener("click", function(){
+        intervalId = setInterval(printString, 1000, "Yash Rastogi on TOP");
+    }, false);
+    document.querySelector("#stop").addEventListener("click", function() {
+        clearInterval(intervalId);
+    }, false);
+
+</script>
+</html>
