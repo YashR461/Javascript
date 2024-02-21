@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="color: #fff; background-color: #212121;">
+    <h1>Code and Chill</h1>
+    <button id="stop"> Stop </button>
+</body>
+<script>
+    setTimeout(function (){
+        console.log("Yash Rastogi")
+    }, 1000);
+
+    //setTimeout as a reference
+    const yash = () => {
+        console.log("Yash")
+    };
+    setTimeout(yash, 1000);
+
+    const changeText = function() {
+        // const h1heading = document.querySelector("h1");
+        // h1heading.innerHTML = "Best JS tutorial";
+
+        const h1heading = document.querySelector("h1");
+        const newHeading = document.createElement("h1");
+        newHeading.textContent = "Best JS tutorial";
+        h1heading.replaceWith(newHeading);
+    }
+
+    const refr =  setTimeout(changeText, 2000);
+    //clearTimeout(refr);
+
+    //applying clearTimeout on a particular event that is clicking on the button
+    document.querySelector("#stop").addEventListener("click", function(){
+        clearTimeout(refr);
+        console.log("Stopped");
+    }, false);
+
+</script>
+</html>
