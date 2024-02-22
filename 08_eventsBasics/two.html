@@ -10,34 +10,31 @@
     <button id="stop"> Stop </button>
 </body>
 <script>
-    setTimeout(function (){
-        console.log("Yash Rastogi")
-    }, 1000);
+
+    //setTimeout
+    setTimeout( function() {
+        console.log("Set timeout working");
+    });
 
     //setTimeout as a reference
-    const yash = () => {
-        console.log("Yash")
+    const yash = function () {
+        console.log("Hello I am Yash");
     };
     setTimeout(yash, 1000);
 
     const changeText = function() {
-        // const h1heading = document.querySelector("h1");
-        // h1heading.innerHTML = "Best JS tutorial";
-
-        const h1heading = document.querySelector("h1");
-        const newHeading = document.createElement("h1");
-        newHeading.textContent = "Best JS tutorial";
-        h1heading.replaceWith(newHeading);
-    }
-
-    const refr =  setTimeout(changeText, 2000);
-    //clearTimeout(refr);
+        const h1Heading = document.querySelector("h1");
+        const newh1 = document.createElement("h1");
+        newh1.textContent = "BEST JS TUTORIAL ON YOUTUBE FOR FREE";
+        h1Heading.replaceWith(newh1)
+    };
+    const changeMe = setTimeout(changeText, 2000);
 
     //applying clearTimeout on a particular event that is clicking on the button
-    document.querySelector("#stop").addEventListener("click", function(){
-        clearTimeout(refr);
+    document.querySelector("#stop").addEventListener("click", function() {
+        clearTimeout(changeMe);
         console.log("Stopped");
-    }, false);
-
+    });
+    
 </script>
 </html>
