@@ -11,30 +11,39 @@
     <button id="stop"> Stop </button>
 </body>
 <script>
-    // setInterval(function () {
-    //     console.log("Yash");
-    // }, 1000);
+    // setInterval() 
+    setInterval(function() {
+        console.log("yash", Date.now());
+    }, 1000);
 
-    // const sayDate = function(str) {
-    //     console.log(str, Date.now());
-    // };
+    // setInterval() as a reference
+    const printMyName = function () {
+        console.log("Hi I am Yash Rastogi", Date.now());
+    }
+    setInterval(printMyName, 2000);
 
-    // const refr = setInterval(sayDate, 2000, "hi");
-    // clearInterval(refr);
+    // setInterval another way 
+    const printString = function(str) {
+        console.log(str, Date.now());
+    }
+    setInterval(printString, 1000, "String to be printed");
+
 
     //start and stop button assignment
     // start => when we press start button it starts printing the string which i will give it
     // stop => when we press stop button it stops the printing
-    let intervalId;
-    const printString = (str) => {
-        console.log(str, Date.now());
+    let validId;
+    const printName = function() {
+        console.log("Hitesh", Date.now());
     };
-    document.querySelector("#start").addEventListener("click", function(){
-        intervalId = setInterval(printString, 1000, "Yash Rastogi on TOP");
-    }, false);
-    document.querySelector("#stop").addEventListener("click", function() {
-        clearInterval(intervalId);
-    }, false);
+
+    const start = document.querySelector("#start").addEventListener("click", function() {
+        validId = setInterval(printMyName, 1000);
+    });
+
+    const stop = document.querySelector("#stop").addEventListener("click", function() {
+        clearInterval(validId);
+    })
 
 </script>
 </html>
