@@ -4,4 +4,4 @@ var accountPassword = "Jaipur"
 let accountState
 
 console.log(accountEmail)
-console.table([accountEmail, accountId, accountPassword, accountState])
+console.table([accountEmail, accountId, accountPassword, accountState]);
