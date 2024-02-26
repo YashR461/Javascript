@@ -1,4 +1,4 @@
-console.log("yash rastogi aidncopancswanscp");
+// console.log("yash rastogi aidncopancswanscp");
 const insert = document.getElementById("insert");
 
 window.addEventListener("keydown", function(e) {
