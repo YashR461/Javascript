@@ -1,0 +1,33 @@
+
+.container {
+    color: green;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.card {
+    width: 70px;
+    height: 80px;
+    background-color: brown;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    font-size: 36px;
+    cursor: pointer;
+    font-size: xx-large;
+}
+
+.card-new {
+    width: 70px;
+    height: 80px;
+    background-color: cyan;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    font-size: 36px;
+    cursor: pointer;
+    font-size: xx-large;
+}
